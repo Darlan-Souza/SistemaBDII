@@ -77,7 +77,7 @@
                             Salario: <input type="number" placeholder="Salario" name="salario">
                         </div><br>
 
-                        <input type="submit" value="Registrar Aluno">
+                        <input type="submit" value="Registrar Professor">
                         </div>
                     </form>
                 </div>
