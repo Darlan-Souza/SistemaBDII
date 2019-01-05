@@ -1,45 +1,45 @@
 body{
-	background: #ccc;
-	margin-top: 0;
-	margin-left: 0;
+    background: #ccc;
+    margin-top: 0;
+    margin-left: 0;
 }
 
 .corpo{
-	background:#897;
-	padding: 5px;
-	width: 1000px;
+    background:#897;
+    padding: 5px;
+    width: 1000px;
     height: 660px;
     margin: 0 auto;
 }
 
 .menu{
-	text-align: center;
+    text-align: center;
 }
 
 .menu ul{
-	list-style:none;
-}
- 
-.menu ul li { 
-	display: inline; 
+    list-style:none;
 }
 
- .menu ul li a {
-	background-color:#EDEDED;
-	color: #333;
-	text-decoration: none;
-	padding: 2px 10px;
+.menu ul li { 
+    display: inline; 
 }
- 
+
+.menu ul li a {
+    background-color:#EDEDED;
+    color: #333;
+    text-decoration: none;
+    padding: 2px 10px;
+}
+
 .menu ul li a:hover {
-	background-color:#D6D6D6;
-	color: #6D6D6D;
-	border-bottom:5px solid #EA0000;
+    background-color:#D6D6D6;
+    color: #6D6D6D;
+    border-bottom:5px solid #EA0000;
 }
 
 .formulario{
-	background:#6D6D6D;
-	width: 400px;
+    background:#6D6D6D;
+    width: 400px;
     height: 450px;
     margin:0 auto;
     padding: 20px;

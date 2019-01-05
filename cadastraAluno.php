@@ -1,14 +1,15 @@
 <?php
+
 /* Attempt MySQL server connection. Assuming you are running MySQL
-server with default setting (user 'root' with no password) */
+  server with default setting (user 'root' with no password) */
 include_once './mysql.php';
- 
+
 // Attempt insert query execution
-try{
+try {
     // Create prepared statement
     $sql = "INSERT INTO aluno (nome_aluno,sobrenome_aluno,email_aluno, data_nasc, rua_aluno, numero, cidade_aluno, estado_aluno) VALUES (:nome_aluno,:sobrenome_aluno,:email_aluno, :data_nasc, :rua_aluno, :numero, :cidade_aluno, :estado_aluno)";
     $stmt = $pdo->prepare($sql);
-    
+
     // Bind parameters to statement
     $stmt->bindParam(':nome_aluno', $_REQUEST['nome_aluno']);
     $stmt->bindParam(':sobrenome_aluno', $_REQUEST['sobrenome_aluno']);
@@ -17,14 +18,14 @@ try{
     $stmt->bindParam(':rua_aluno', $_REQUEST['rua_aluno']);
     $stmt->bindParam(':numero', $_REQUEST['numero']);
     $stmt->bindParam(':cidade_aluno', $_REQUEST['cidade_aluno']);
-    $stmt->bindParam(':estado_aluno', $_REQUEST['estado_aluno']);   
+    $stmt->bindParam(':estado_aluno', $_REQUEST['estado_aluno']);
     // Execute the prepared statement
     $stmt->execute();
     echo"<script language='javascript' type='text/javascript'>window.location.href='./addAluno.php';</script>";
-} catch(PDOException $e){
+} catch (PDOException $e) {
     die("ERROR: Could not able to execute $sql. " . $e->getMessage());
 }
- 
+
 // Close connection
 unset($pdo);
 ?>

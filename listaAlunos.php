@@ -1,7 +1,7 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>Alterar aluno</title>
+        <title></title>
         <link rel="stylesheet" type="text/css" href="estilo.css">
     </head>
 
@@ -9,20 +9,13 @@
 
         <?php
         include_once './mysql.php';
-        include_once './listaAlunos.php';
-        include_once './listaProfessores.php';
-        include_once './listaCursos.php';
-        include_once './listaMatriculas.php';
-        include_once './listaDiretores.php';
-        include_once './listaMensalidades.php';
-        include_once './listaDespesas.php';
-/*
+
         try {
-            
             $stmt = $pdo->prepare("SELECT * FROM aluno");
             $stmt->execute();
             $arrValues = $stmt->fetchAll(PDO::FETCH_ASSOC);
 // open the table
+	    print "<h2><p align=center> <font color=red> Alunos: </font></p></h2> ";
             print "<table align=center border=2px height = 100 wdith= 200 cellspacing=5 cellpadding= 5>\n";
             print "<tr>\n";
 // add the table headers
@@ -43,8 +36,6 @@
         } catch (PDOException $e) {
             die("ERROR: Could not able to execute $sql. " . $e->getMessage());
         }
- * 
- */
         ?>
     </body>
 </html>
