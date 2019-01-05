@@ -4,6 +4,8 @@
   server with default setting (user 'root' with no password) */
 include_once './mysql.php';
 
+include_once './topo.php';
+
 // Attempt insert query execution
 try {
     // Create prepared statement
@@ -29,4 +31,5 @@ try {
 
 // Close connection
 unset($pdo);
+include_once './rodape.php';
 ?>

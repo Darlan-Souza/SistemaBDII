@@ -7,41 +7,50 @@
     </head>
 
     <body>
-        <div class="corpo">
-            <div class="menu">
-                <h1>Cadastra alunos</h1>
-                <div class="formulario">
+        <?php
+        include_once './topo.php';
+        ?>
+            <div class="titulo_opcoes">
+                <font color="black">Cadastra alunos
+            </div>
+            
                     <form action="cadastraAluno.php" method="POST">
-                        <div>
-                            Nome: <input type="text" placeholder="Nome" name="nome_aluno">
-                        </div><br>
-
-                        <div>
-                            Sobrenome: <input type="text" placeholder="Sobrenome" name="sobrenome_aluno">
-                        </div><br>
-
-                        <div>
-                            E-mail: <input type="email" placeholder="E-mail" name="email_aluno">
-                        </div><br>
-
-                        <div>
-                            Data de nascimento: <input type="date" placeholder="Data" name="data_nasc">
-                        </div> <br>
-
-                        <div>
-                            Rua: <input type="text" placeholder="Rua" name="rua_aluno">
-                        </div><br>
-
-                        <div>
-                            Número: <input type="number" placeholder="Numero" name="numero">
-                        </div><br>
-
-                        <div>
-                            Cidade: <input type="text" placeholder="Cidade" name="cidade_aluno">
-                        </div><br>
-
-                        <div>
-                            Estado: <select name="estado_professor" placeholder="Estado">
+                        
+                        <table bgcolor="darksalmon" align=center border=2px height = 100 wdith= 200 cellspacing=5 cellpadding= 5>
+                            
+                            <tr>
+                                <td>
+                                    Nome: <input type="text" placeholder="Nome" name="nome_aluno">
+                                </td>
+                                <td>
+                                    Sobrenome: <input type="text" placeholder="Sobrenome" name="sobrenome_aluno">
+                                </td>
+                                <td>
+                                    E-mail: <input type="email" placeholder="E-mail" name="email_aluno">
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    Data de nascimento: <input type="date" placeholder="Data" name="data_nasc">
+                                </td>
+                                <td>
+                                    Rua: <input type="text" placeholder="Rua" name="rua_aluno">
+                                </td>
+                                <td>
+                                    Número: <input type="number" placeholder="Numero" name="numero">
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    Cidade: <input type="text" placeholder="Cidade" name="cidade_aluno">
+                                </td>
+                                <td>
+                                    
+                                </td>
+                                <td>
+                                    Estado: <select name="estado_professor" placeholder="Estado">
                                 <option selected disabled="disabled">Estado</option>
                                 <option value="AC">Acre</option>
                                 <option value="AL">Alagoas</option>
@@ -71,12 +80,16 @@
                                 <option value="SE">Sergipe</option>
                                 <option value="TO">Tocantins</option>
                             </select>
-                        </div><br>
-
-                        <input type="submit" value="Registrar Aluno">
-                        </div>
-                    </form>
-                </div>
-            </div>
+                                </td>
+                            </tr>
+                            
+                        </table>
+                        <br>
+                        <p align="center"><input type="submit" value="Registrar Aluno"></p>
+                        
+            <?php
+            include_once './rodape.php';
+            ?>
+                        
     </body>
 </html>
