@@ -10,23 +10,15 @@
         <?php
         include_once './topo.php';
         ?>
-        <div class="corpo">
-            <div class="menu">
-                <h1>Remover alunos</h1>
-                <div class="formulario">
-                    <form action="cadastra.php" method="POST">
-
-                        <input type="hidden" name="id" value="<?php echo $row_usuario['id']; ?>">
-
-                        <div>
-                            Codigo: <input type="text" placeholder="Nome" name="nome_aluno" value="<?php echo $row_usuario['nome_aluno']; ?>">
-                        </div><br>
-
-                        <input type="submit" value="Remover Aluno">
-                        </div>
-                    </form>
-                </div>
-            </div>
+        <div class="titulo_opcoes">
+            <font color="black">Remove alunos
+        </div>
+        <form action="excluiAluno.php" method="POST">
+            
+            <p align="center"> Identificação (ID) do aluno: <input type="text" name="id_aluno">
+            
+            <input type="submit" value="Remover Aluno"></p>
+        </form>
         <?php
         include_once './rodape.php';
         ?>
