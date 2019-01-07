@@ -9,6 +9,8 @@
 
         <?php
         include_once './mysql.php';
+        
+        include_once './topo.php';
 
         try {
             $stmt = $pdo->prepare("SELECT * FROM aluno");
@@ -36,6 +38,8 @@
         } catch (PDOException $e) {
             die("ERROR: Could not able to execute $sql. " . $e->getMessage());
         }
+        
+        include_once './rodape.php';
         ?>
     </body>
 </html>

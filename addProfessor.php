@@ -7,6 +7,9 @@
     </head>
 
     <body>
+        <?php
+        include_once './topo.php';
+        ?>
         <div class="corpo">
             <div class="menu">
                 <h1>Cadastra Professores</h1>
@@ -82,5 +85,8 @@
                     </form>
                 </div>
             </div>
+            <?php
+            include_once './rodape.php';
+            ?>
     </body>
 </html>

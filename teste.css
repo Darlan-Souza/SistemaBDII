@@ -1,48 +1,3 @@
-
-.corpo{
-    background:#897;
-    width: 50px;
-    height: 50px;
-}
-
-
-.principal{
-    text-align: center;
-    min-height:100%;
-    position:relative;
-}
-
-.principal ul{
-    list-style:none;
-}
-
-.principal ul li { 
-    display: inline; 
-    background-color: d
-}
-
-.principal ul li a {
-    background-color:#EDEDED;
-    color: #333;
-    text-decoration: none;
-    padding: 2px 10px;
-}
-
-.principal ul li a:hover {
-    background-color:#D6D6D6;
-    color: #6D6D6D;
-    border-bottom:5px solid #EA0000;
-}
-
-.formulario{
-    background:#6D6D6D;
-    width: 400px;
-    height: 450px;
-    margin:0 auto;
-    padding: 20px;
-    text-align: center;
-}
-
 *{
     font-family: arial;
 }
@@ -50,13 +5,11 @@
 body{
     margin: 0;
     padding: 0;
-    height: 100%;
 }
 
 .topo{
     height: 50px;
     background-color: #347aba;
-    padding: 10px;
 }
 
 .topointerior{
@@ -122,14 +75,8 @@ body{
 
 .rodape{
     background-color: #347aba;
-    color: white;
-    position:absolute;
-    bottom:0;
-    width:100%;
-    height:60px;   /* Mesma Altura do Rodapé */
-}
-
-INPUT.MeuInput {
-    width: 180px;
-    height: 30px;
+    height: 100px;
+    line-height: 50px;
+    color: #FFFFFF;
+    margin-top: 569px;
 }
