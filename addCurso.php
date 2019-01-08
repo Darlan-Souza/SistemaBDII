@@ -10,13 +10,12 @@
         <?php
         include_once './topo.php';
         ?>
-        <div class="corpo">
-            <div class="menu">
-                <h1>Cadastra Curso</h1>
-                <div class="formulario">
+        <div class="titulo_opcoes">
+            <font color="black">Cadastra Cursos
+        </div>
                     <form action="cadastraCurso.php" method="POST">
                         <div>
-                            Professor Responsável: <input type="number" placeholder="Professor Responsável" name="id_professor">
+                            ID do Professor Responsável: <input type="number" placeholder="Professor Responsável" name="id_professor">
                         </div><br>
 
                         <div>
@@ -27,11 +26,9 @@
                             Quantidade de alunos: <input type="number" placeholder="Quantidade de alunos:" name="qtd_alunos">
                         </div><br>
 
-                        <input type="submit" value="Registrar Aluno">
+                        <input type="submit" value="Registrar Curso">
                         </div>
                     </form>
-                </div>
-            </div>
             <?php
             include_once './rodape.php';
             ?>

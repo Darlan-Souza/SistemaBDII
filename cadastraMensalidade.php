@@ -1,0 +1,28 @@
+<?php
+
+/* Attempt MySQL server connection. Assuming you are running MySQL
+  server with default setting (user 'root' with no password) */
+include_once './mysql.php';
+
+include_once './topo.php';
+
+// Attempt insert query execution
+try {
+    // Create prepared statement
+    $sql = "INSERT INTO mensalidade(id_curso, valor_mensalidade) VALUES (:id_curso, :valor_mensalidade)";
+    $stmt = $pdo->prepare($sql);
+
+    // Bind parameters to statement
+    $stmt->bindParam(':id_curso', $_REQUEST['id_curso']);
+    $stmt->bindParam(':valor_mensalidade', $_REQUEST['valor_mensalidade']);
+    // Execute the prepared statement
+    $stmt->execute();
+    echo"<script language='javascript' type='text/javascript'>window.location.href='./addMensalidade.php';</script>";
+} catch (PDOException $e) {
+    die("ERROR: Could not able to execute $sql. " . $e->getMessage());
+}
+
+// Close connection
+unset($pdo);
+include_once './rodape.php';
+?>

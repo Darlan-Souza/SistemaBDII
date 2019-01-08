@@ -17,7 +17,7 @@
             $arrValues = $stmt->fetchAll(PDO::FETCH_ASSOC);
 // open the table
 	    print "<h2><p align=center> <font color=red> Cursos: </font></p></h2> ";
-            print "<table align=center border=2px height = 100 wdith= 200 cellspacing=5 cellpadding= 5>\n";
+            print "<table align=center border=2px height = 100 width= 500 cellspacing=5 cellpadding= 5>\n";
             print "<tr>\n";
 // add the table headers
             foreach ($arrValues[0] as $key => $useless) {
