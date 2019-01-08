@@ -48,6 +48,14 @@
                             <a href="diretor.php"><input type="button" class="MeuInput" value="Gerenciar Diretores"></a>
                         </td>
                     </tr>
+                    
+                    <tr>
+                        <td></td>
+                        
+                        <td><a href="mensalidade.php"><input type="button" class="MeuInput" value="Gerenciar Mensalidades"></a></td>
+                        
+                        <td></td>
+                    </tr>
 
                 </table>
 

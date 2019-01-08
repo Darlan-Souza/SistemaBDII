@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>GereCurso</title>
+        <title>GereMensalidade</title>
         <link rel="stylesheet" type="text/css" href="estilo.css">
     </head>
     <body>
@@ -11,9 +11,9 @@
         ?>
         <div class="principal">
             <ul>
-                <li><a href="addCurso.php">Cadastrar Curso</a></li>
-                <li><a href="removeCurso.php">Remover Curso</a></li>
-                <li><a href="alteraCurso.php">Alterar Curso</a></li>
+                <li><a href="addMensalidade.php">Cadastrar Mensalidade</a></li>
+                <li><a href="removeMensalidade.php">Remover Mensalidade</a></li>
+                <li><a href="alteraMensalidade.php">Alterar Mensalidade</a></li>
             </ul>
         </div>
         <?php

@@ -9,15 +9,12 @@
         <?php
         include_once './topo.php';
         ?>
-        <div class="corpo">
-            <div class="menu">
-                <h1>Gestão de Professores</h1>
-                <ul>
-                    <li><a href="addProfessor.php">Cadastrar Professor</a></li>
-                    <li><a href="removeProfessor.php">Remover Professor</a></li>
-                    <li><a href="alteraProfessor.php">Alterar Professor</a></li>
-                </ul>
-            </div>
+        <div class="principal">
+            <ul>
+                <li><a href="addProfessor.php">Cadastrar Professor</a></li>
+                <li><a href="removeProfessor.php">Remover Professor</a></li>
+                <li><a href="alteraProfessor.php">Alterar Professor</a></li>
+            </ul>
         </div>
         <?php
         include_once './rodape.php';

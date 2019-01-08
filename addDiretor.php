@@ -11,22 +11,22 @@
         include_once './topo.php';
         ?>
         <div class="titulo_opcoes">
-            <font color="black">Cadastra professores
+            <font color="black">Cadastra diretores
         </div>
 
-        <form action="cadastraProfessor.php" method="POST">
+        <form action="cadastraDiretor.php" method="POST">
 
             <table bgcolor="darksalmon" align=center border=2px height = 100 wdith= 200 cellspacing=5 cellpadding= 5>
 
                 <tr>
                     <td>
-                        Nome: <input type="text" placeholder="Nome" name="nome_professor">
+                        Nome: <input type="text" placeholder="Nome" name="nome_diretor">
                     </td>
                     <td>
-                        Sobrenome: <input type="text" placeholder="Sobrenome" name="sobrenome_professor">
+                        Sobrenome: <input type="text" placeholder="Sobrenome" name="sobrenome_diretor">
                     </td>
                     <td>
-                        E-mail: <input type="email" placeholder="E-mail" name="email_professor">
+                        E-mail: <input type="email" placeholder="E-mail" name="email_diretor">
                     </td>
                 </tr>
 
@@ -35,7 +35,7 @@
                         Data de nascimento: <input type="date" placeholder="Data" name="data_nasc">
                     </td>
                     <td>
-                        Rua: <input type="text" placeholder="Rua" name="rua_professor">
+                        Rua: <input type="text" placeholder="Rua" name="rua_diretor">
                     </td>
                     <td>
                         Número: <input type="number" placeholder="Numero" name="numero">
@@ -44,11 +44,13 @@
 
                 <tr>
                     <td>
-                        Cidade: <input type="text" placeholder="Cidade" name="cidade_professor">
+                        Cidade: <input type="text" placeholder="Cidade" name="cidade_diretor">
                     </td>
-                    
                     <td>
-                        Estado: <select name="estado_professor" placeholder="Estado">
+
+                    </td>
+                    <td>
+                        Estado: <select name="estado_diretor" placeholder="Estado">
                             <option selected disabled="disabled">Estado</option>
                             <option value="AC">Acre</option>
                             <option value="AL">Alagoas</option>
@@ -79,15 +81,11 @@
                             <option value="TO">Tocantins</option>
                         </select>
                     </td>
-                    
-                    <td>
-                        Salário: <input type="text" placeholder="Salário" name="salario">
-                    </td>
                 </tr>
 
             </table>
             <br>
-            <p align="center"><input type="submit" value="Registrar Professor"></p>
+            <p align="center"><input type="submit" value="Registrar Diretor"></p>
 
             <?php
             include_once './rodape.php';

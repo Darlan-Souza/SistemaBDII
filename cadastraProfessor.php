@@ -6,10 +6,11 @@ include_once './mysql.php';
 
 include_once './topo.php';
 
+
 // Attempt insert query execution
 try {
     // Create prepared statement
-    $sql = "INSERT INTO professor(nome_professor,sobrenome_professor,email_professor, data_nasc, rua_professor, numero, cidade_professor, estado_professor, salario) VALUES (:nome_professor,:sobrenome_professor,:email_professor, :data_nasc, :rua_professor, :numero, :cidade_professor, :estado_professor, :salario)";
+    $sql = "INSERT INTO professor (nome_professor,sobrenome_professor,email_professor, data_nasc, rua_professor, numero, cidade_professor, estado_professor, salario) VALUES (:nome_professor,:sobrenome_professor,:email_professor, :data_nasc, :rua_professor, :numero, :cidade_professor, :estado_professor, :salario)";
     $stmt = $pdo->prepare($sql);
 
     // Bind parameters to statement
