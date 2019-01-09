@@ -10,7 +10,7 @@ include_once("mysql.php");
 	$numero = $_POST['numero'];
 	$cidade = $_POST['cidade_aluno'];
 	$estado = $_POST['estado_aluno'];
-
+	//
 try {
 	echo $id;
 
