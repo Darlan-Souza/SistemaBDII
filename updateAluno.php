@@ -2,46 +2,108 @@
 
 /* Attempt MySQL server connection. Assuming you are running MySQL
   server with default setting (user 'root' with no password) */
-include_once './mysql.php';
+
 
 include_once './topo.php';
+$id_alu = $_GET['id_a'];
+include_once './mysql.php';
 
 
-// Attempt insert query execution
-try {
 
-	$id = $_POST['id_aluno'];
-	$nome = $_POST['nome_aluno'];
-	$sobrenome = $_POST['sobrenome_aluno'];
-	$email = $_POST['email_aluno'];
-	$data_nasc = $_POST['data_nasc'];
-	$rua = $_POST['rua_aluno'];
-	$numero = $_POST['numero'];
-	$cidade = $_POST['cidade_aluno'];
-	$estado = $_POST['estado_aluno'];
 
-    // Create prepared statement
-    $sql = "UPDATE aluno SET nome_aluno = $nome, sobrenome_aluno = $sobrenome, email_aluno = $email, data_nasc = $data_nasc, rua_aluno = $rua, numero = $numero, cidade_aluno = $cidade, estado_aluno = $estado WHERE id_aluno = $id";
 
-    $stmt->bindParam($nome, $_REQUEST['nome_aluno']);
-    $stmt->bindParam($sobrenome, $_REQUEST['sobrenome_aluno']);
-    $stmt->bindParam($email, $_REQUEST['email_aluno']);
-    $stmt->bindParam($data_nasc, $_REQUEST['data_nasc']);
-    $stmt->bindParam($rua, $_REQUEST['rua_aluno']);
-    $stmt->bindParam($numero, $_REQUEST['numero']);
-    $stmt->bindParam($cidade, $_REQUEST['cidade_aluno']);
-    $stmt->bindParam($estado, $_REQUEST['estado_aluno']);
 
-    $stmt = $pdo->prepare($sql);
-
-    // Execute the prepared statement
-    $stmt->execute();
-    echo"<script language='javascript' type='text/javascript'>window.location.href='./alteraAluno.php';</script>";
-} catch (PDOException $e) {
-    die("ERROR: Could not able to execute $sql. " . $e->getMessage());
-}
-
-// Close connection
+$sql = "call sp_dadosAluno($id_alu);";
+$query = $pdo->query($sql);
+// O segredo esta nesta linha abaixo \/
+$return = $query->fetch();
 unset($pdo);
+
+?>
+
+<form action="updatealuno2.php" method="POST">
+
+            
+            <table bgcolor="darksalmon" align=center border=2px height = 100 wdith= 200 cellspacing=5 cellpadding= 5>
+
+                <tr>
+                    <td>
+                        Nome: <input type="text" placeholder="Nome" name="nome_aluno" value="<?php  echo $return['nome_aluno'] ?>">
+                    </td>
+                    <td>
+                        Sobrenome: <input type="text" placeholder="Sobrenome" name="sobrenome_aluno" value="<?php  echo $return['sobrenome_aluno'] ?>">
+                    </td>
+                    <td>
+                        E-mail: <input type="email" placeholder="E-mail" name="email_aluno" value="<?php  echo $return['email_aluno'] ?>">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        Data de nascimento: <input type="date" placeholder="Data" name="data_nasc" value="<?php  echo $return['data_nasc'] ?>">
+                    </td>
+                    <td>
+                        Rua: <input type="text" placeholder="Rua" name="rua_aluno" value="<?php  echo $return['rua_aluno'] ?>">
+                    </td>
+                    <td>
+                        Número: <input type="number" placeholder="Numero" name="numero" value="<?php  echo $return['numero'] ?>">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        Cidade: <input type="text" placeholder="Cidade" name="cidade_aluno" value="<?php  echo $return['cidade_aluno'] ?>">
+                    </td>
+                    <td>
+
+                    </td>
+                    <td>
+                        Estado: <select name="estado_aluno" placeholder="Estado" required="">
+                            <option></option>
+                            <option  disabled="disabled">Estado</option>
+                            <option value="AC">Acre</option>
+                            <option value="AL">Alagoas</option>
+                            <option value="AP">Amapá</option>
+                            <option value="AM">Amazonas</option>
+                            <option value="BA">Bahia</option>
+                            <option value="CE">Ceará</option>
+                            <option value="DF">Distrito Federal</option>
+                            <option value="ES">Espírito Santo</option>
+                            <option value="GO">Goiás</option>
+                            <option value="MA">Maranhão</option>
+                            <option value="MT">Mato Grosso</option>
+                            <option value="MS">Mato Grosso do Sul</option>
+                            <option value="MG">Minas Gerais</option>
+                            <option value="PA">Pará</option>
+                            <option value="PB">Paraíba</option>
+                            <option value="PR">Paraná</option>
+                            <option value="PE">Pernambuco</option>
+                            <option value="PI">Piauí</option>
+                            <option value="RJ">Rio de Janeiro</option>
+                            <option value="RN">Rio Grande do Norte</option>
+                            <option value="RS">Rio Grande do Sul</option>
+                            <option value="RO">Rondônia</option>
+                            <option value="RR">Roraima</option>
+                            <option value="SC">Santa Catarina</option>
+                            <option value="SP">São Paulo</option>
+                            <option value="SE">Sergipe</option>
+                            <option value="TO">Tocantins</option>
+                        </select>
+                    </td>
+                </tr>
+
+            </table>
+            <br>
+              <input type="hidden" value=" <?php  echo $id_alu ?>"  name="id">
+            <p align="center"><input type="submit" value="Atualizar Aluno" name="atualizar"></p>
+        </form>
+
+<?php
+
+
+
+
+
 include_once './rodape.php';
+
 ?>
