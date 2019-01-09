@@ -9,7 +9,7 @@
         <div class="topo"> 
             <div class="topointerior">
                 <div class="logomarca">
-                    <a href="http://localhost/SistemaBDII/"><font color="white">Início</a>
+                    <a href="index.php"><font color="white">Início</a>
                 </div>
                 <div class="menu">
                     <ul>

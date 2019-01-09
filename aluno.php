@@ -13,7 +13,7 @@
             <ul>
                 <li><a href="addAluno.php">Cadastrar Aluno</a></li>
                 <li><a href="removeAluno.php">Remover Aluno</a></li>
-                <li><a href="alteraAluno.php">Alterar Aluno</a></li>
+                <li><a href="alteraAluno.php">Alterar dados do aluno</a></li>
             </ul>
         </div>
         <?php
