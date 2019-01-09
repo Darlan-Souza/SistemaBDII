@@ -9,7 +9,7 @@ include_once './topo.php';
 // Attempt insert query execution
 try {
     // Create prepared statement
-    $sql = "INSERT INTO matricula(id_aluno, id_curso) VALUES (:id_aluno, :id_curso)";
+    $sql = "INSERT INTO matricula(id_aluno, id_curso) VALUES (:id_aluno, :id_curso); UPDATE curso SET qtd_alunos=qtd_alunos+1 where id_curso=:id_curso";
     $stmt = $pdo->prepare($sql);
 
     // Bind parameters to statement

@@ -11,8 +11,9 @@ include_once './topo.php';
 try {
     // Create prepared statement
     $id = $_POST['id_matricula'];
+    $id_curso = $_POST['id_curso'];
 
-    $sql = "DELETE FROM matricula WHERE id_matricula = $id";
+    $sql = "DELETE FROM matricula WHERE id_matricula = $id; UPDATE curso SET qtd_alunos=qtd_alunos-1 where id_curso = $id_curso; ";
 
     $stmt = $pdo->prepare($sql);
     
