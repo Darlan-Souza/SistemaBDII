@@ -11,13 +11,14 @@
         include_once './topo.php';
         ?>
         <div class="titulo_opcoes">
-            <font color="black">Remove Matriculas
+            <font color="black">Remove Matrículas
         </div>
         <form action="excluiMatricula.php" method="POST">
-            
-            <p align="center"> Identificação (ID) da Matricula: <input type="text" name="id_matricula">
-            
-            <input type="submit" value="Remover Matricula"></p>
+
+            <p align="center"> Identificação (ID) da Matricula: <input type="text" name="id_matricula"> <br>
+            <p align="center"> Identificação (ID) do Curso: <input type="text" name="id_curso"> <br><br>
+
+                <input type="submit" value="Remover Matricula"></p>
         </form>
         <?php
         include_once './rodape.php';
