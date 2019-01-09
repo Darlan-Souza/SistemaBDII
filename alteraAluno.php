@@ -18,7 +18,7 @@
 
             <p align="center"> Identificação (ID) do aluno: <input type="text" name="id_aluno"></p>
                 
-            <table bgcolor="darksalmon" align=center border=2px height = 100 wdith= 200 cellspacing=5 cellpadding= 5>
+            <table bgcolor="darksalmon" align=center border=2px height = 100 cellspacing=5 cellpadding= 5>
 
                 <tr>
                     <td>
