@@ -1,2 +1,3 @@
 SistemaBDII
 
+Testando pelo terminal
