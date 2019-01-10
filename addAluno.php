@@ -5,7 +5,7 @@
         <title>GereCurso</title>
         <link rel="stylesheet" type="text/css" href="estilo.css">
     </head>
-
+<!--Teste Trabalho Banco de DadosII-->
     <body>
         <?php
         include_once './topo.php';
