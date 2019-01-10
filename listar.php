@@ -22,8 +22,10 @@
 			               <?php
 
 			            }else{
-			// open the table
-				    print "<h2><p align=center> <font color=red> Mensalidades: </font></p></h2> ";
+					//1 letra maiuscula
+			        $msg1 = ucfirst($msg);
+			        // open the table
+				    print "<h2><p align=center> <font color=red> $msg1   </font></p></h2> ";
 			            print "<table align=center border=2px height = 100 wdith= 200 cellspacing=5 cellpadding= 5>\n";
 			            print "<tr>\n";
 			// add the table headers
