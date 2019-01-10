@@ -12,7 +12,7 @@ include_once './mysql.php';
 
 
 
-
+//
 $sql = "call sp_dadosAluno($id_alu);";
 $query = $pdo->query($sql);
 // O segredo esta nesta linha abaixo \/
