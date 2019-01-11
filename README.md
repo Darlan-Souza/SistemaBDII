@@ -1,5 +1,3 @@
 SistemaBDII
 
-Teste
-
-Testando Outroooooooooooooooooo
+Testando pelo terminal
