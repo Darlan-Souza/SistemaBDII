@@ -13,13 +13,13 @@
                 </div>
                 <div class="menu">
                     <ul>
-                        <li><a href="listaAlunos.php" target="_blank">LISTAR ALUNOS</a></li>
-                        <li><a href="listaProfessores.php" target="_blank">LISTAR PROFESSORES</a></li>
-                        <li><a href="listaCursos.php" target="_blank">LISTAR CURSOS</a></li>
-                        <li><a href="listaMensalidades.php" target="_blank">LISTAR MENSALIDADES</a></li>
-                        <li><a href="listaDespesas.php" target="_blank">LISTAR DESPESAS</a></li>
-                        <li><a href="listaMatriculas.php" target="_blank">LISTAR MATRÍCULAS</a></li>
-                        <li><a href="listaDiretores.php" target="_blank">LISTAR DIRETORES</a></li>
+                        <li><a href="listar.php?msg=aluno" target="_blank">LISTAR ALUNOS</a></li>
+                        <li><a href="listar.php?msg=professor" target="_blank">LISTAR PROFESSORES</a></li>
+                        <li><a href="listar.php?msg=curso" target="_blank">LISTAR CURSOS</a></li>
+                        <li><a href="listar.php?msg=mensalidade" target="_blank">LISTAR MENSALIDADES</a></li>
+                        <li><a href="listar.php?msg=despesa" target="_blank">LISTAR DESPESAS</a></li>
+                        <li><a href="listar.php?msg=matricula" target="_blank">LISTAR MATRÍCULAS</a></li>
+                        <li><a href="listar.php?msg=diretor" target="_blank">LISTAR DIRETORES</a></li>
                     </ul>
                 </div>
             </div>

@@ -15,7 +15,7 @@ try {
 	echo $id;
 
 	/*$stmt = $pdo->prepare("UPDATE aluno SET nome_aluno = $nome, sobrenome_aluno = $sobrenome, email_aluno = $email, data_nasc = $data_nasc, rua_aluno = $rua, numero = $numero, cidade_aluno = $cidade, estado_aluno = $estado WHERE id_aluno = $id");
-*/
+*/	//
     // Create prepared statement
     $msql = "UPDATE aluno SET nome_aluno = '$nome', sobrenome_aluno = '$sobrenome', email_aluno = '$email', data_nasc = '$data_nasc', rua_aluno = '$rua', numero = '$numero', cidade_aluno = '$cidade', estado_aluno = '$estado' WHERE id_aluno = '$id'";
 

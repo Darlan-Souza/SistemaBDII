@@ -15,6 +15,12 @@
                 <li><a href="removeMatricula.php">Remover Matricula</a></li>
                 <li><a href="alteraMatricula.php">Alterar Matricula</a></li>
             </ul>
+            <br><br>
+            
+            <ul>
+                <li><a href="listar.php?msg=Professor-Aluno">Listar relações entre professores e alunos</a></li>
+            </ul>
+            
         </div>
         <?php
         include_once './rodape.php';

@@ -12,7 +12,7 @@
 
         <div class="conteudointerno">
             <div class="titulo_opcoes">
-                <font color="black">Escolha uma opção abaixo:
+                <font color="black">Escolha uma das opções abaixo:
             </div>
 
 
