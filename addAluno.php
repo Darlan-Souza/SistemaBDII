@@ -85,7 +85,7 @@
 
             </table>
             <br>
-            <p align="center"><input type="submit" value="Registrar Aluno"></p>
+            <p align="center"><input type="submit" name="addAluno" value="Registrar Aluno"></p>
 
             <?php
             include_once './rodape.php';
