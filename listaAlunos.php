@@ -2,7 +2,7 @@
     <head>
         <meta charset="utf-8">
         <title></title>
-        <!-- <link rel="stylesheet" type="text/css" href="estilo.css"> -->
+        <link rel="stylesheet" type="text/css" href="estilo.css">
     </head>
 
     <body>
@@ -10,6 +10,7 @@
         <?php
         include_once './mysql.php';
         
+        include_once './topo.php';
 
         try {
             $stmt = $pdo->prepare("SELECT * FROM aluno");
@@ -38,6 +39,7 @@
             die("ERROR: Could not able to execute $sql. " . $e->getMessage());
         }
         
+        include_once './rodape.php';
         ?>
     </body>
 </html>
